@@ -5,13 +5,13 @@ const Connected = (props) => {
     return (
         <div className="connected-container">
             <h1 className="connected-header">Welcome Buddy, Let's Vote</h1>
-            <p className="connected-account">Metamask Account: {props.account}</p>
+            <p className="connected-account">ID: {props.account}</p>
             {/* <p className="connected-account">Remaining Time: {props.remainingTime}</p> */}
             { props.showButton ? (
                 <p className="connected-account">Great, voted</p>
             ) : (
                 <div>
-                    <input type="number" placeholder="Entern Candidate Index" value={props.number} onChange={props.handleNumberChange}></input>
+                    <input type="number" placeholder="Index" value={props.number} onChange={props.handleNumberChange}></input>
             {/* <br /> */}
             <button className="login-button" onClick={props.voteFunction}>Vote</button>
 
