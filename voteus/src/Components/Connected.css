@@ -1,0 +1,46 @@
+/* Connected.css */
+.connected-container {
+    /* Your existing styles for the container */
+}
+
+.connected-account {
+    /* Your existing styles for the Metamask account */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 7px;
+    margin-right: 40px;
+}
+
+button.login-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: solid;
+    padding: 7px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.login-button:hover {
+    background-color: #c2c2c2; /* New background color for hover */
+}
+
+.connected-container > .input-container input {
+    margin: 0;
+    padding: 0;
+}
+
+.connected-container > .input-container button {
+    margin: 0;
+    padding: 0;
+}
+
+.connected-container > .input-container input {
+    margin-right: 10px;
+}
