@@ -1,4 +1,3 @@
-// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract Voting {
@@ -61,20 +60,4 @@ constructor(string[] memory _candidateNames, uint256 _durationInMinutes) {
     }
         return votingEnd - block.timestamp;
     }
-
-    function resetVotes() public onlyOwner {
-    require(block.timestamp >= votingEnd, "Voting has not ended yet.");
-    for (uint256 i = 0; i < candidates.length; i++) {
-        candidates[i].voteCount = 0;
-    }
-    
-    // You may also want to reset the voters mapping here.
-    // Resetting the voters mapping would allow everyone to vote again.
-    // For added security, you could also restrict this function to be callable only after the voting has ended.
-    // Be cautious with this, as it effectively removes all vote records.
-    
-    // for (uint256 i = 0; i < candidates.length; i++) {
-    //     voters[candidates[i].candidateAddress] = false;
-    // }
-}
 }
